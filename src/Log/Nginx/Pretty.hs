@@ -13,11 +13,11 @@ import qualified Data.ByteString.Lazy as LazyBytes
 import           Log.Nginx.Types
 import qualified URI.ByteString as URI
 
-wrap :: Semigroup a => a -> a -> a
+wrap :: Monoid a => a -> a -> a
 wrap x y = x <> y <> x
 
 brackets
-  :: (IsString a, Semigroup a)
+  :: (IsString a, Monoid a)
   => a -> a
 brackets x = "[" <> x <> "]"
 
