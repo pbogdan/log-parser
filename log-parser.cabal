@@ -45,9 +45,9 @@ test-suite log-parser-test
         Nginx.GatewaySpec
         Nginx.CombinedSpec
     build-depends:
-        QuickCheck >=2.9.0 && <2.11,
+        QuickCheck >=2.9.0,
         bytestring >=0.10.8.1 && <0.11,
-        exceptions >=0.8.3 && <0.9,
+        exceptions >=0.8.3,
         hspec >=2.3.0,
         lens >=4.15,
         protolude >= 0.2,
