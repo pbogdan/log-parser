@@ -1,3 +1,4 @@
-{ nixpkgs ? import <nixpkgs> {}, compiler ? "ghc865" }:
-nixpkgs.pkgs.haskell.packages.${compiler}.callPackage ./log-parser.nix {
-}
+{ sources ? import ./nix/sources.nix, compiler ? "ghc865" }:
+let
+  pkgs = import sources.nixpkgs { };
+in pkgs.haskell.packages.${compiler}.callPackage ./log-parser.nix { }
